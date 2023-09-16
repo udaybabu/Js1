@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>80% Scroll Event Example</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scroll down to trigger the event</h1>
+  <input type="text" autofocus>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      
+      if (scrollPercentage >= 80) {
+        // Code to execute when scrolled to 80% of the page height
+        console.log('Scrolled to 80%');
+        // Additional actions or function calls can be placed here
+      }
+    });
+  </script>
+
+</body>
+</html>

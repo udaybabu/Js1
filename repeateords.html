@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function repeatFinder(str) {
+        let repeat = "";
+        for (let i = 0; i < str.length; i++) {
+            for (let j = i + 1; j < str.length; j++) {
+                if (str.charAt(i) == str.charAt(j) && repeat.indexOf(str.charAt(j)) == -1) {
+                    repeat += str.charAt(i);
+                }
+            }
+        }
+        return repeat;
+    }
+    //console.log(repeatFinder(sample));
+
+    function repeatWord(str) {
+        let repeat = ''
+        for (let i = 0; i < str.length; i++) {
+            for (let j = i + 1; j < str.length; j++) {
+                if (str.charAt(i) == str.charAt(j) && repeat.indexOf(str.charAt(i)) == -1) {
+                   repeat += str.charAt(i)
+                }
+            }
+        }
+        return repeat
+    }
+    console.log(repeatWord('uday kumar'))
+
+    function myclouser() {
+        let name = 'Hello Mahesh'
+        function  test() {
+            return name
+        }
+        return test
+    }
+    var b = myclouser()
+    var h = b()
+    console.log('clouser data is:', h)
+
+    function buildGreeting() {
+    let message = 'Hello';
+
+    function greetUser() {
+        console.log(message);
+    }
+
+    return greetUser;
+}
+let hello = buildGreeting();
+hello();
+</script>
+
+<body>
+
+</body>
+
+</html>
